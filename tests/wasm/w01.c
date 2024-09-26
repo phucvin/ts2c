@@ -1,5 +1,9 @@
+
+#define WASM_EXPORT __attribute__((used, visibility("default")))
+
 typedef short int16_t;
-int16_t fib(int16_t n)
+
+WASM_EXPORT int16_t fib(int16_t n)
 {
     if (n < 2)
         return 1;
