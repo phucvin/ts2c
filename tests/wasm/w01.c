@@ -1,10 +1,6 @@
 #include <stdio.h>
-
-#define WASM_EXPORT __attribute__((used, visibility("default")))
-
 typedef short int16_t;
-
-WASM_EXPORT int16_t fib(int16_t n)
+int16_t fib(int16_t n)
 {
     if (n < 2)
         return 1;
@@ -14,7 +10,7 @@ WASM_EXPORT int16_t fib(int16_t n)
 }
 
 int main(void) {
-    printf("fib(10) = %d\n", fib(10));
+    printf("%d\n", fib(20));
 
     return 0;
 }
