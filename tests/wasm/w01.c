@@ -1,3 +1,4 @@
+#include <stdio.h>
 
 #define WASM_EXPORT __attribute__((used, visibility("default")))
 
@@ -13,6 +14,7 @@ WASM_EXPORT int16_t fib(int16_t n)
 }
 
 int main(void) {
+    printf("fib(10) = %d\n", fib(10));
 
     return 0;
 }
